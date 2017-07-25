@@ -1,0 +1,39 @@
+#!/bin/bash
+while true ;do
+
+echo "which kali version are you using ?"
+echo "1. kali Rolling"
+echo "2. kali sana"
+echo "3. kali moto"
+
+read count
+ 
+if [ $count -eq 1 ]
+then
+echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
+echo "# For source package access, uncomment the following line">>/etc/apt/sources.list
+echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free ">>/etc/apt/sources.list
+
+exit
+
+elif [ $count -eq 2 ]
+then
+ echo "deb http://old.kali.org/kali sana main non-free contrib" > /etc/apt/sources.list
+ echo "# For source package access, uncomment the following line">>/etc/apt/sources.list
+ echo "deb-src http://old.kali.org/kali sana main non-free contrib">> /etc/apt/sources.list
+
+exit
+
+elif [ $count -eq 3 ]
+then
+  echo "deb http://old.kali.org/kali moto main non-free contrib" > /etc/apt/sources.list
+ echo "# For source package access, uncomment the following line" >>/etc/apt/sources.list
+ echo "deb-src http://old.kali.org/kali moto main non-free contrib" >>/etc/apt/sources.list
+
+exit
+
+else 
+echo " You are out of range please enter number 1,2 or 3"
+  
+fi
+done
