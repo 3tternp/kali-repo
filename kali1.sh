@@ -2,7 +2,9 @@
 while true ;do
 
 echo "which kali version are you using ?"
+echo "new repository file for 2016.1 or above"
 echo "1. kali Rolling"
+echo "retired/ old repository file for old system kali sana and moto"
 echo "2. kali sana"
 echo "3. kali moto"
 
