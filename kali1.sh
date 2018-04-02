@@ -12,10 +12,11 @@ read count
  
 if [ $count -eq 1 ]
 then
-echo "deb http://repo.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
+echo "#deb http://repo.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
 echo "# For source package access, uncomment the following line">>/etc/apt/sources.list
-echo "deb-src http://repo.kali.org/kali kali-rolling main contrib non-free ">>/etc/apt/sources.list
-
+echo "#deb-src http://repo.kali.org/kali kali-rolling main contrib non-free ">>/etc/apt/sources.list
+echo "#Kali Linux Rolling Official Mirrors Repositories"
+echo "deb http://kali.cs.nctu.edu.tw/kali kali-rolling main contrib non-free">>/etc/apt/sources.list 
 exit
 
 elif [ $count -eq 2 ]
