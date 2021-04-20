@@ -13,8 +13,8 @@ read count
 if [ $count -eq 1 ]
 then
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib">>/etc/apt/sources.list
-echo "# For latest and safest snapshot access, uncomment the following line">>/etc/apt/sources.list
-echo "deb http://http.kali.org/kali kali-last-snapshot main non-free contrib" > /etc/apt/sources.list
+echo "# For additional repos">>/etc/apt/sources.list
+echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 exit
 
 elif [ $count -eq 2 ]
