@@ -15,6 +15,7 @@ then
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib">>/etc/apt/sources.list
 echo "# For additional repos">>/etc/apt/sources.list
 echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
+sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
 exit
 
 elif [ $count -eq 2 ]
